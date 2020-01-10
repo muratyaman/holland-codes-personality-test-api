@@ -1,0 +1,33 @@
+{
+  "name": "holland-codes-personality-test-api",
+  "version": "1.0.0",
+  "description": "Holland Codes Personality Test HTTP API using Node.js, Express.js and Knex.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muratyaman/holland-codes-personality-test-api.git"
+  },
+  "keywords": [
+    "Holland",
+    "Codes",
+    "Personality",
+    "Test",
+    "HTTP",
+    "API"
+  ],
+  "author": "Haci Murat Yaman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muratyaman/holland-codes-personality-test-api/issues"
+  },
+  "homepage": "https://github.com/muratyaman/holland-codes-personality-test-api#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.7",
+    "mssql": "^6.0.1"
+  }
+}
