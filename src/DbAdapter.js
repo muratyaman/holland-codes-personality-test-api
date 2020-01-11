@@ -1,13 +1,14 @@
-const knex = require('knex');
+import knex from 'knex';
 
 const constants = require('./constants');
 
-const newDbAdapter = ({ client, connection }) => {
+const newDbAdapter = ({ client, connection }, logger) => {
   
   const db = knex({
     client, // 'mssql',
     connection,
-    pool: {min: 1, max: 5},
+    pool: { min: 1, max: 5 },
+    acquireConnectionTimeout: 10000,
   });
   
   /**

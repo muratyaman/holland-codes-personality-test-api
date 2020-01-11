@@ -29,6 +29,10 @@ const newConfig = (process) => {
     http: {
       port: pe.HTTP_PORT || 8080,
     },
+    log: {
+      format: pe.LOG_FORMAT,
+      file: pe.LOG_FILE,
+    },
     db: {
       client: pe.DB_CLIENT,
       connection: dbConnection(pe.DB_CLIENT, pe),
