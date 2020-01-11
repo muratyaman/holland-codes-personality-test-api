@@ -2,10 +2,10 @@
 require('dotenv').config();
 
 // load constructors
-const Config     = require('./src/Config');
-const DbAdapter  = require('./src/DbAdapter');
-const HttpApp    = require('./src/HttpApp');
-const HttpRoutes = require('./src/HttpRoutes');
+import Config     from'./Config';
+import DbAdapter  from'./DbAdapter';
+import HttpApp    from'./HttpApp';
+import HttpRoutes from'./HttpRoutes';
 
 // create new instances
 const config    = Config(process);

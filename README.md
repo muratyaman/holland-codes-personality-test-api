@@ -12,11 +12,24 @@ Holland Codes Personality Test HTTP API using Node.js, Express.js and Knex.js
 
 ### Configuration
 
+Prepare .env based on .env_sample
+
 HTTP
+TODO
 
 Database
-
+TODO
 
 ### Run MS SQL Server
 
+TODO
+
+### Run in dev mode
+
+* npm run server
+
+### Run in production mode
+
+* npm run build
+* npm run server:prod
 

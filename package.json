@@ -4,6 +4,14 @@
   "description": "Holland Codes Personality Test HTTP API using Node.js, Express.js and Knex.js",
   "main": "index.js",
   "scripts": {
+    "start": "npm run prod",
+    "server": "babel-node ./src/index.js",
+    "server:prod": "node ./dist/index.js",
+    "dev": "NODE_ENV=development npm-run-all server",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist",
+    "prod": "NODE_ENV=production npm-run-all clean build server:prod",
+    "watch": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,5 +37,12 @@
     "express": "^4.17.1",
     "knex": "^0.20.7",
     "mssql": "^6.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "nodemon": "^2.0.2"
   }
 }
