@@ -6,6 +6,20 @@ const newHttpApp = ({ port }, logger) => {
   const expApp = express();
   const expRouter = express.Router();
   
+  function timeLog (req, res, next) {
+    logger.info(new Date(), req.url, 'start');
+    next();
+    logger.info(new Date(), req.url, 'end');
+  }
+  
+  function consoleLog (req, res, next) {
+    console.log(new Date(), req.url);
+    next();
+  }
+  
+  expApp.use(timeLog);
+  expApp.use(consoleLog);
+  
   expApp.use(logger.logger);
   
   const server = () => {
@@ -16,11 +30,6 @@ const newHttpApp = ({ port }, logger) => {
     return expRouter;
   };
   
-  expApp.use(function timeLog (req, res, next) {
-    logger.info(Date.now(), 'start');
-    next();
-    logger.info(Date.now(), 'end');
-  });
   
   const listen = (onListen) => {
     expApp.listen(port, onListen);
