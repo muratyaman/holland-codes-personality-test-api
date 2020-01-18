@@ -27,7 +27,8 @@ const newHttpRoutes = (config, httpRouter, dbAdapter) => {
   const questionList    = makeListHandler(constants.TBL_QUESTIONS);
   const choiceList      = makeListHandler(constants.TBL_CHOICES);
   const answerList      = makeListHandler(constants.TBL_ANSWERS);
-  const answerSave      = async (req, res) => {
+  
+  const answerSave = async (req, res) => {
     // TODO: validate input
     const input = req.body();
     const { test_id, user_id, attempt_id, answers } = input;
@@ -52,7 +53,7 @@ const newHttpRoutes = (config, httpRouter, dbAdapter) => {
     httpRouter.get(constants.RUT_QUESTIONS, questionList);
     httpRouter.get(constants.RUT_CHOICES, choiceList);
     httpRouter.get(constants.RUT_ANSWERS, answerList);
-    httpRouter.post(constants.RUT_ANSWERS, answerSave);
+    httpRouter.post(constants.RUT_ANSWERS_SAVE, answerSave);
     httpRouter.get('/', (req, res) => res.json({ ts: new Date() }));
     
     return true;
@@ -66,6 +67,7 @@ const newHttpRoutes = (config, httpRouter, dbAdapter) => {
       questionList,
       choiceList,
       answerList,
+      answerSave,
     },
     attachRoutes,
   };
