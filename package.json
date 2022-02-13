@@ -1,6 +1,6 @@
 {
   "name": "holland-codes-personality-test-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Holland Codes Personality Test HTTP API using Node.js, Express.js and Knex.js",
   "main": "index.js",
   "scripts": {
