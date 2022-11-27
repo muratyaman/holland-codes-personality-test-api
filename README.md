@@ -1,8 +1,12 @@
 # holland-codes-personality-test-api
+
 Holland Codes Personality Test HTTP API using Node.js, Express.js and Knex.js
 
 ## Installation of packages
-* npm install
+
+```sh
+npm install
+```
 
 ## Important Dependencies
 
@@ -12,7 +16,7 @@ Holland Codes Personality Test HTTP API using Node.js, Express.js and Knex.js
 
 ### Configuration
 
-Prepare .env based on .env_sample
+Prepare `.env` based on `.env_sample`
 
 HTTP
 TODO
@@ -26,10 +30,13 @@ TODO
 
 ### Run in dev mode
 
-* npm run server
+```sh
+npm run server
+```
 
 ### Run in production mode
 
-* npm run build
-* npm run server:prod
-
+```sh
+npm run build
+npm run server:prod
+```
