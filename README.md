@@ -18,11 +18,37 @@ npm install
 
 Prepare `.env` based on `.env_sample`
 
-HTTP
-TODO
+```plain
+LOG_FORMAT="combined"
+LOG_FILE="./logs/access.log"
 
-Database
-TODO
+HTTP_PORT="8080"
+
+#---------------------------
+DB_CLIENT="mssql"
+DB_HOST="127.0.0.1"
+DB_PORT="1433"
+DB_USER="sa"
+DB_PASS="str0ngPa55!"
+
+#---------------------------
+#DB_CLIENT="mysql"
+#DB_HOST="127.0.0.1"
+#DB_PORT="3306"
+#DB_USER="root"
+#DB_PASS="str0ngPa55!"
+
+#---------------------------
+#DB_CLIENT="pg"
+#DB_HOST="127.0.0.1"
+#DB_PORT="5432"
+#DB_USER="postgres"
+#DB_PASS="str0ngPa55!"
+
+#---------------------------
+#DB_CLIENT="sqlite3"
+#DB_FILE="./tmp/db.sqlite"
+```
 
 ### Run MS SQL Server
 
