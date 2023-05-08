@@ -40,7 +40,7 @@
     "mssql": "^9.0.1",
     "mysql": "^2.18.1",
     "pg": "^8.8.0",
-    "sqlite3": "^5.1.2",
+    "sqlite3": "^5.1.5",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
